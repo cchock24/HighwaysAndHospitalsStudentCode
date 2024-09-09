@@ -17,4 +17,5 @@ public class HighwaysAndHospitals {
     public static long cost(int n, int hospitalCost, int highwayCost, int cities[][]) {
         return 0;
     }
+
 }
