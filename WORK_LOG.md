@@ -10,6 +10,7 @@ Name: Caden Chock
 | Sep 11 | 11:30-12:00 |                                  Trying to make a loop so it goes through all the cities and adds them to a group |
 | Sep 12 | 12:00-12:15 |         Working out some bugs. I think my issue rn is that I'm changing the paramenters of my loop inside my loop |
 | Sep 12 |  2:10-2:40  |                                                                                             Working on Union Find |
+| Sep 12 |  2:40-3:15  |                                                      Fixed a Long casting problem. Working on the Larger Problems |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
