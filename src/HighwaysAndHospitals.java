@@ -33,8 +33,10 @@ public class HighwaysAndHospitals {
         for(int i = 0; i < cities.length; i++){
             int city2 = cities[i][1];
             int city1 = cities[i][0];
-            if(group[city2] == 0 && city2 != group[city1]){
-                group[city2] = city1;
+            if(group[city2] == 0){
+                if(city2 != group[city1]){
+                    group[city2] = city1;
+                }
             }
             else{
                 if(group[city2] != group[city1]){
@@ -52,6 +54,9 @@ public class HighwaysAndHospitals {
             if(group[i] == 0){
                 roots++;
             }
+        }
+        if(roots == 0){
+            roots++;
         }
 
         // Total = hospitalCost * #Cluster + highwayCost (Cities - # clusters)

@@ -11,6 +11,7 @@ Name: Caden Chock
 | Sep 12 | 12:00-12:15 |         Working out some bugs. I think my issue rn is that I'm changing the paramenters of my loop inside my loop |
 | Sep 12 |  2:10-2:40  |                                                                                             Working on Union Find |
 | Sep 12 |  2:40-3:15  |                                                      Fixed a Long casting problem. Working on the Larger Problems |
+| Sep 16 |  1:30-1:50  |                                                                                                      Debugging :/ |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
