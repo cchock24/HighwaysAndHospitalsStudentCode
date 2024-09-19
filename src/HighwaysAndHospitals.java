@@ -24,39 +24,65 @@ public class HighwaysAndHospitals {
         if(hospitalCost < highwayCost) {
             return num*hospital;
         }
-
         int[] group = new int[n+1];
-
-
-
         // Array of Cities and their roots
         for(int i = 0; i < cities.length; i++){
             int city2 = cities[i][1];
             int city1 = cities[i][0];
-            if(group[city2] == 0){
-                if(city2 != group[city1]){
+            int temp2 = city2;
+            int temp1 = city1;
+            int root;
+            int counter = 1;
+            while(group[city1] > 0){
+                city1 = group[city1];
+                // Keeps Track of Order
+                if(group[city1] <= 0){
+                    group[city1] -= counter;
+                }
+                counter++;
+            }
+            counter = 1;
+            while(group[city2] > 0){
+                city2 = group[city2];
+                // Keeps Track of Order
+                if(group[city2] <= 0){
+                    group[city2] -= counter;
+                }
+                counter++;
+            }
+            root = city1;
+            if(city1 != city2){
+                // Weight Balancing
+                if(group[city2] > group[city1])
+                {
+                    group[city1] += group[city2];
                     group[city2] = city1;
                 }
-            }
-            else{
-                if(group[city2] != group[city1]){
-                    group[group[city2]] = city1;
+                else{
+                    group[city2] += group[city1];
+                    group[city1] = city2;
+                    root = city2;
                 }
             }
-            for(int j = 1; j < group.length; j++){
-                if(group[j] == city2){
-                    group[j] = city1;
-                }
+            // Path Compression
+            while(group[temp1] > 0){
+                int temp3 = group[temp1];
+                group[temp1] = root;
+                temp1 = temp3;
+            }
+            while(group[temp2] > 0){
+                int temp4 = group[temp2];
+                group[temp2] = root;
+                temp2 = temp4;
             }
         }
+
         long roots = 0;
+        // Gets the Number of Clusters
         for(int i = 1; i < group.length; i++){
-            if(group[i] == 0){
+            if(group[i] <= 0){
                 roots++;
             }
-        }
-        if(roots == 0){
-            roots++;
         }
 
         // Total = hospitalCost * #Cluster + highwayCost (Cities - # clusters)
@@ -65,6 +91,3 @@ public class HighwaysAndHospitals {
         return cost;
     }
 }
-/*
-
-*/
