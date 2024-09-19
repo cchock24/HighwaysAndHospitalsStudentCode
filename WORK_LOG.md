@@ -10,8 +10,8 @@ Name: Caden Chock
 | Sep 11 | 11:30-12:00 |                                                                              Trying to make a loop so it goes through all the cities and adds them to a group |
 | Sep 12 | 12:00-12:15 |                                                     Working out some bugs. I think my issue rn is that I'm changing the paramenters of my loop inside my loop |
 | Sep 12 |  2:10-2:40  | Working on Union Find. I think I get the main idea. I looked at the union find examples in class and made 2 main cases when the value added is a root or not. |
-| Sep 12 |  2:40-3:15  |                                                                                                  Fixed a Long casting problem. Working on the Larger Problems |
-| Sep 16 |  1:30-1:50  |                                                                                                                                                  Debugging :/ |
+| Sep 12 |  2:40-3:15  |                                     Fixed a Long casting problem. Working on the Larger Problems. Larger problems aren't working, so i'm gonna meet Mr. Blick |
+| Sep 16 |  1:30-1:50  |    Debugging :/. More specifically I add weight balancing and path compression to my code. I also updated the union find based on what we went over in class. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
